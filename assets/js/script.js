@@ -19,7 +19,8 @@ var formSubmitHandler = function(event){
 
 // function getForcast passing "city" will use the api call to query for the array of information associated with that "city" and DISPLAY it 
 var getForecast = function(city) {
-    var apiUrl = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=1f511942224dcd22d6edf0f24728b84c";
+    var apiUrl = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/https://api.openweathermap.org/data/2.5/weather?q=" + city + 
+    // "&APPID=1f511942224dcd22d6edf0f24728b84c";
     // fetch using the dynamically rendered var apiUrl that includes the input 
     fetch(apiUrl)
         // then we'll run the function of the response to "if/else" whether successful
@@ -37,22 +38,20 @@ var getForecast = function(city) {
         });
 };
 
+var displayForecast = function() {
+
+    for () {
+
+    } else {
+        
+    }
+}
 
 searchCityFormEl.addEventListener("submit", formSubmitHandler);
 
 
-// <!-- DOM El #city, gets entered into formSubmitHandler function, with if/else, and console.log
-//           the point is if it's working, run function getUserRepos(username -which is set in the formSubmitHandler 
-//           function variable-)-->
-
-//           <!-- function getUserRepos will set var apiUrl; fetch(apiUrl).then(function(response){if(response.ok){
-//             response.json().then(functoin(data){
-//               displayRepos(data, user); });
-//           },else{alert})  
-//           .catch function-->
-
 //           <!-- function displayRepos is an involved function, should be the json data array -->
-//           <!-- displayRepos = function(repos, searchTerm) whereas "repos" is set by var repoName (which will be the datta array in the loop)
+//           <!-- displayRepos = function(repos, searchTerm) whereas "repos" is set by var repoName (which will be the data array in the loop)
 //           & "searchTerm" is set by calling on DOM as repoSearchTerm.textContent = searchTerm;
 //           FOR LOOP uses "repos[i].owner.login (which means the name of the gitHub account) + "/" + 
 //           repos[i].name (which refers to the name of each of the individual repos)" -->
