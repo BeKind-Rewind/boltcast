@@ -81,7 +81,7 @@ form {
 }
 
 .box {
-
+    background-color: var(--secondary);
 }
 
 .box-header {
@@ -93,13 +93,14 @@ form {
 }
 
 .btn {
-
+    background-color:khaki;
+    color: var(--dark);
 }
 
 /* list of previous searches */
 
 .prevSearches {
-
+    
 }
 
 .inputStorage {
@@ -122,9 +123,8 @@ form {
 #day5 {
     margin: 0;
     padding: 0;
-    color: var(--secondary);
+    color: var(--dark);
     background-color: var(--soft-blue);
-    border-color: 15px black;
     border-radius: 10px;
 }
 
