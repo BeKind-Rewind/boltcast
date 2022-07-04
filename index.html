@@ -40,8 +40,13 @@
         <!-- right column -->
         <div class="col-12 col-md-8">
             <div class="card border border-info" id="current-card-body">
-                <h2 class="card-header" id="currentDate">Today</h2>
-                <p id="rightNowStatus">Current Status</p>    
+                <h2 class="card-header" id="currentDate"></h2>
+                <p id="rightNowStatus">Current Forecast</p>
+                <img src="" id="icon"> 
+                <span id="temp"></span>
+                <span id="wind"></span>
+                <span id="humidity"></span>
+                <span id="uvi"></span>
             </div>
             <div class="col-12 col-md-8">
                 <div class="flex-row wrapper" id="extendedForecast">
@@ -59,6 +64,7 @@
     <footer>
 
     </footer>
+    <script type="module"> import { Octokit, App } from "https://cdn.skypack.dev/octokit"; </script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
