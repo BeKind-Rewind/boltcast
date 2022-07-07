@@ -33,9 +33,9 @@ var formSubmitHandler = function(event){
     var cityInput = cityEl.value.trim();
     if (cityInput) {
         getForecast(cityInput);
-        // To clear the input textarea after search
-        // cityEl.value = "";   
     }
+    // To clear the input textarea after search  
+    formSearch.reset(); 
 };
 
 
