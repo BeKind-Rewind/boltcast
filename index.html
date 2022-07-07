@@ -21,41 +21,38 @@
     <main class="flex-row justify-space-between">
         <!-- left column -->
         <div class="col-12 col-md-4">
-            <div class="box">
+            <div class="box" id="search-box">
                 <h2 class="box-header">Search by City</h2>
-                <!-- set form as event listener handler-->
-                <!-- DOM El #search-city-form, is waiting for submit: addEventListener("submit", formSubmitHandler) -->
-                <form id="search-city-form" class="box-body">
-                    <label class="form-label" for="cityInput">City</label>
-                    <!-- DOM #cityInput-->
-                    <input name="cityInput" id="cityInput" type="text" autofocus="true" class="form-input" />
-                    <button type="submit" class="btn border border-primary">Get Forecast</button>
+                <form id="formSearch" class="box-body">
+                    <div class="form-input">
+                        <input name="cityInput" id="cityInput" type="text" autofocus="true" class="form-input" placeholder="Enter City"/>
+                    </div>
+                    <div class="form-btn">
+                        <button type="submit" id="citySubmit" class="btn border border-primary">Get Forecast</button>
+                    </div>
                 </form>
             </div>    
-            <div class="card" id="searched">
+            <div class="card" id="searchHistory">
                 <h4 id="prevSearches">History</h4>
-                <p class="inputStorage">(Previous searches)</p>
+                <ul class="list-group" id="recentSearch"></ul>
             </div>  
         </div>
         <!-- right column -->
         <div class="col-12 col-md-8">
             <div class="card border border-info" id="current-card-body">
-                <h2 class="card-header" id="currentDate"></h2>
-                <p id="rightNowStatus">Current Forecast</p>
-                <img src="" id="icon"> 
+                <h2 class="card-header" id="currentDate">Today in the city</h2>
+                <p class="mb-2" id="rightNowStatus">Current Forecast</p>
+                <img id="icon"> 
                 <span id="temp"></span>
                 <span id="wind"></span>
                 <span id="humidity"></span>
                 <span id="uvi"></span>
             </div>
-            <div class="col-12 col-md-8">
+            <div class="card border border-info" id="cardForecast">
                 <div class="flex-row wrapper" id="extendedForecast">
-                    <!-- 5 divs for the 5 days may not be necessary -->
-                    <div class="col-2 card mr-3" id="day1">Day 1</div>
-                    <div class="col-2 card mr-3" id="day2">Day 2</div>
-                    <div class="col-2 card mr-3" id="day3">Day 3</div>
-                    <div class="col-2 card mr-3" id="day4">Day 4</div>
-                    <div class="col-2 card mr-3" id="day5">Day 5</div>
+                    <h2 id="five-day-title">Five-Day Forecast</h2>
+                        <ul class="five-day-list" id="five-day-list-item">
+                        </ul>
                 </div>
             </div>
         </div>

@@ -3,7 +3,9 @@
     --secondary: #9caea9;
     --tertiary: #788585;
     --soft-blue: #4e92f6;
+    --dark-blue: #144288;
     --light-dark: #6f6866;
+    --yellow: #fdff6f;
     --dark: #38302e;
     --border-radius: .3rem;
 }
@@ -16,7 +18,7 @@ body {
     background-color: var(--primary);
     margin: 0;
     padding: 0;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: var(--dark);
     line-height: 1.5;
     font-size: 16px;
@@ -43,16 +45,13 @@ h6 {
 #header-box {
     padding: 5px 5px 5px 5px;
     margin: 5px 5px 5px 5px;
-    background-color: var(--soft-blue);
+    color: var(--primary);
+    background-color: var(--dark-blue);
     border-radius: var(--border-radius);
 }
 
 .app-title {
-    color: var(--dark);
-}
-
-.app-describe {
-    
+    color: var(--yellow);
 }
 
 /* main */
@@ -63,33 +62,18 @@ h6 {
 }
 
 .justify-space-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 /* search box */
 
-.col-12 {
-
-}
-
-.col-md-4 {
-
-}
-
-form {
-
-}
 
 .box {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
 .box-header {
-
-}
-
-.box-body {
-
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .btn {
@@ -99,32 +83,28 @@ form {
 
 /* list of previous searches */
 
-.prevSearches {
-    
+#prevSearches {
+  background-color: var(--dark-blue);
+  color: var(--primary)
 }
 
-.inputStorage {
-
+#inputStorage {
+  background-color: var(--tertiary);
 }
 
 /* current weather card */ 
 
-.col-md-8 {
-    
+#icon {
+  height: min-content;
+  width: min-content;
 }
-
-
 /* 5-day forecast */
 
-#day1,
-#day2,
-#day3,
-#day4,
-#day5 {
+#spanForecast {
     margin: 0;
     padding: 0;
-    color: var(--dark);
-    background-color: var(--soft-blue);
+    color: var(--secondary);
+    background-color: var(--dark-blue);
     border-radius: 10px;
 }
 
