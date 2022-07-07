@@ -64,7 +64,7 @@ var getForecast = function(city) {
                     return response.json();
                 })
                 .then(function(data){
-                    document.getElementById('icon').src = `http://openweathermap.org/img/w/${data.current.weather[0].icon}.png`;
+                    document.getElementById('icon').src = `https://openweathermap.org/img/w/${data.current.weather[0].icon}.png`;
                     var todaysTemp = document.getElementById("temp");
                     todaysTemp.textContent = "Temp: " + data.current.temp + " deg F";
                     var todaysWind = document.getElementById("wind");
