@@ -9,4 +9,4 @@ https://bekind-rewind.github.io/boltcast/
 
 # ScreenShot
 
-!["BoltCast daily weather app"](/images/boltcast-screenshot.png?raw=true)
+!["BoltCast daily weather app"](/images/boltcast_screenshot.png?raw=true)
