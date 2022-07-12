@@ -74,16 +74,31 @@ var getForecast = function(city) {
                     var todaysUvi = document.getElementById("uvi");
                     todaysUvi.textContent = "UVIndex: " + data.current.humidity;
                     console.log(data, "second fetch");
-                    
+                })
+                .then(function(data){
                     // 5 day forecast createElement cards from array?
-                    // var daily = document.getElementById("five-day-list-item");
-                    // var weatherCard = [
-                    //     new Date(data.daily[i].dt * 1000),
-                    //     document.getElementById('dailyIcon').src = `http://openweathermap.org/img/w/${data.daily.weather[0].icon}.png`,
-                    //     temp= data.daily[i].temp.day,
-                    //     wind= data.daily[i].wind_speed,
-                    //     humidity = data.daily[i].humidity,
-                    // ]
+                    var daily = [
+                        "date" = new Date(data.daily[i].dt * 1000),
+                        document.getElementById('dailyIcon').src = `http://openweathermap.org/img/w/${data.daily.weather[i].icon}.png`,
+                        "temp" = data.daily[i].temp.day,
+                        "wind" = data.daily[i].wind_speed,
+                        "humidity" = data.daily[i].humidity
+                    ];
+
+                    var stringDaily = JSON.stringify(daily);
+                    localStorage.setItem("daily", stringDaily);
+
+                    var dailyCard = function() {
+                        var text = "";
+                        var fiveDay = localStorage.getItem("daily");
+                        var dailyArray = JSON.parse(fiveDay);
+                        for (var i = 0; i < fiveDay.length < 5 ; i++) {
+                            text += "<div>" + dailyArray[i] + "</div><br>"
+                        };
+                        document.getElementById("five-day-list-item").innerHTML = text;
+                    }
+  
+                    dailyCard();
                 })
                 
         })
