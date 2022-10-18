@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>BoltCast</title>
 </head>
@@ -25,34 +26,35 @@
                 <h2 class="box-header">Search by City</h2>
                 <form id="formSearch" class="box-body">
                     <div class="form-input">
-                        <input name="cityInput" id="cityInput" type="text" autofocus="true" class="form-input" placeholder="Enter City"/>
+                        <input name="cityInput" id="cityInput" type="text" autofocus="true" class="form-input"
+                            placeholder="Enter City" />
                     </div>
                     <div class="form-btn">
                         <button type="submit" id="citySubmit" class="btn border border-primary">Get Forecast</button>
                     </div>
                 </form>
-            </div>    
+            </div>
             <div class="card" id="searchHistory">
                 <h4 id="prevSearches">History</h4>
                 <ul class="list-group" id="recentSearch"></ul>
-            </div>  
+            </div>
         </div>
         <!-- right column -->
         <div class="col-12 col-md-8">
             <div class="card border border-info" id="current-card-body">
                 <h2 class="card-header" id="currentDate">Today in the city</h2>
                 <p class="mb-2" id="rightNowStatus">Current Forecast</p>
-                <img id="icon"> 
+                <img id="icon">
                 <span id="temp"></span>
                 <span id="wind"></span>
                 <span id="humidity"></span>
-                <span id="uvi"></span>
+                <span class="current-number" id="uvi"></span>
             </div>
             <div class="card border border-info" id="cardForecast">
                 <div class="flex-row wrapper" id="extendedForecast">
                     <h2 id="five-day-title">Five-Day Forecast</h2>
-                        <ul class="five-day-list" id="five-day-list-item">
-                        </ul>
+                    <ul class="five-day-list" id="five-day-list-item">
+                    </ul>
                 </div>
             </div>
         </div>
@@ -61,7 +63,9 @@
     <footer>
 
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="module"> import { Octokit, App } from "https://cdn.skypack.dev/octokit"; </script>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
