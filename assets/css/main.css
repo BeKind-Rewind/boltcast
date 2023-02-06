@@ -1,0 +1,31 @@
+:root {
+  --primary: #ccdad1;
+  --secondary: #9caea9;
+  --tertiary: #788585;
+  --soft-blue: #4e92f6;
+  --dark-blue: #144288;
+  --light-dark: #6f6866;
+  --yellow: #fdff6f;
+  --dark: #38302e;
+  --border-radius: .3rem;
+}
+
+* {}
+
+body {}
+
+header {}
+
+.leftColumn {}
+
+.searchForm {}
+
+#input {}
+
+.recentResults {}
+
+.rightColumn {}
+
+.currentWeather {}
+
+.fiveDayWeather {}

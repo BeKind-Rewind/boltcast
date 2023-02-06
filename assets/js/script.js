@@ -1,12 +1,8 @@
 // targets the id of the user input FORM
 var searchCityFormEl = document.querySelector("#formSearch");
-// targets the id of USER INPUT to search for desired city  
 var cityEl = document.querySelector("#cityInput");
-// targets the id of UL within the Search History's <div>
 var searchListEl = document.querySelector("#recentSearch");
-// targets the id of the current forecast card
 var todayForecastEl = document.querySelector("#rightNowStatus");
-// targets the header <div> within the current forecast card
 var currentDateEl = document.querySelector("#currentDate");
 var recentSearch = document.querySelector(".recentSearch");
 var currentUviNumber = document.querySelector(".current-number");
@@ -16,33 +12,28 @@ var savedSearches = [];
 
 
 // This is "submit" event listening delegated to function "formSubmitHandler": "when button is clicked the response to the input is this:"
-var formSubmitHandler = function (event) {
+function formSubmitHandler(event) {
     event.preventDefault();
 
     var searchCityInput = document.querySelector("input[name='cityInput']").value;
 
-    // create list item
     var listItemEl = document.createElement("li");
     listItemEl.className = "search-item";
 
-    // create div to hold search info and add to list item
     var searchInfoEl = document.createElement("div");
-
-    // give it a class name
     searchInfoEl.className = "search-info";
-
-    // add HTML content to div
     searchInfoEl.innerHTML = "<h3 class='cityInput'>" + searchCityInput + "</h3>";
-    listItemEl.appendChild(searchInfoEl);
 
-    // add list item to list
+    listItemEl.appendChild(searchInfoEl);
+    // ADD A LINK TO ASSOCIATED SEARCH RESULT
+
+    // #recentSearch
     searchListEl.appendChild(listItemEl);
 
     var cityInput = cityEl.value.trim();
     if (cityInput) {
         getForecast(cityInput);
     }
-    // To clear the input textarea after search  
     formSearch.reset();
 };
 
